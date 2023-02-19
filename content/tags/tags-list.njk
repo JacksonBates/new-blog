@@ -1,0 +1,15 @@
+---
+permalink: /birds/
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Birds
+  order: 3
+---
+<h1>Birds</h1>
+
+<ul>
+{% for tag in collections.all | getAllTags | filterTagList %}
+	{% set tagUrl %}/birds/{{ tag | slugify }}/{% endset %}
+	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a></li>
+{% endfor %}
+</ul>
