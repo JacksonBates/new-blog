@@ -1,15 +1,15 @@
 ---
-permalink: /birds/
+permalink: /tags/
 layout: layouts/home.njk
 eleventyNavigation:
-  key: Birds
+  key: Tags
   order: 3
 ---
-<h1>Birds</h1>
+<h1>Tags</h1>
 
 <ul>
 {% for tag in collections.all | getAllTags | filterTagList %}
-	{% set tagUrl %}/birds/{{ tag | slugify }}/{% endset %}
+	{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
 	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a></li>
 {% endfor %}
 </ul>

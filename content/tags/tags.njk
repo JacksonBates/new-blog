@@ -12,11 +12,11 @@ pagination:
 layout: layouts/home.njk
 eleventyComputed:
   title: Tagged “{{ tag }}”
-permalink: /birds/{{ tag | slugify }}/
+permalink: tags/{{ tag | slugify }}/
 ---
 <h1>Featuring: {{ tag }}</h1>
 
 {% set postslist = collections[ tag ] %}
 {% include "postslist.njk" %}
 
-<p>See <a href="/birds/">all birds</a>.</p>
+<p>See <a href="/tags/">all tags</a>.</p>
