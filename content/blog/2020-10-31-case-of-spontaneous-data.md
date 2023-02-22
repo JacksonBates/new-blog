@@ -1,6 +1,5 @@
 ---
 title: The Case of the Spontaneous Data
-permalink: /spontaneous-data
 date: "2020-10-31"
 tags:
   - inherited-codebase-diaries

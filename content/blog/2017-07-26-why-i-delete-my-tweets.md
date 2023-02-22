@@ -1,6 +1,5 @@
 ---
 title: Why and How I Delete My Tweets After 10 Days
-permalink: /ephemeral-twitter
 date: "2017-07-26"
 tags:
   - twitter

@@ -1,6 +1,5 @@
 ---
 title: Setting up a simple testing suite
-permalink: /mocha-chai
 date: "2016-10-30T00:00:00.0Z"
 tags:
   - testing

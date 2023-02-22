@@ -1,6 +1,5 @@
 ---
 title: How to Orient Yourself in Legacy Codebases
-permalink: /legacy-code
 date: "2020-11-16"
 tags:
   - legacy

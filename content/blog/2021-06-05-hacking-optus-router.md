@@ -1,6 +1,5 @@
 ---
 title: "Hacking an Optus Sagemcom F@ST3864V2 router to change DNS settings"
-permalink: /optus-router-hack-dns
 date: "2021-06-05"
 tags:
   - hacking

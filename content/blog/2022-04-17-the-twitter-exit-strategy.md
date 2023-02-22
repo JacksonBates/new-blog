@@ -1,6 +1,5 @@
 ---
 title: The Twitter Exit Strategy
-permalink: twitter-exit
 date: "2022-04-17"
 description:
   How I'm prepping to leave Twitter which is most likely inevitable at

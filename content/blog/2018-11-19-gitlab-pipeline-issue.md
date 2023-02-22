@@ -1,6 +1,5 @@
 ---
 title: Overcoming a Gitlab Pipeline Failure
-permalink: /gitlab-pipeline-failure
 date: "2018-11-19"
 tags:
   - gitlab

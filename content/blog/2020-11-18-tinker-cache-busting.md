@@ -1,6 +1,5 @@
 ---
 title: How to Restart Tinker
-permalink: /tinker-restart
 date: "2020-11-18"
 tags:
   - tips

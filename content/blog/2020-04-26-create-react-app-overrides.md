@@ -1,6 +1,5 @@
 ---
 title: Fixing AntD CSS Module Imports in Create React App with CRACO
-permalink: /antd-craco-shenanigans
 date: "2020-04-26"
 tags:
   - react

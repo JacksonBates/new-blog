@@ -1,6 +1,5 @@
 ---
 title: How to find a mentor
-permalink: /finding-a-mentor
 date: "2020-11-27"
 tags:
   - career

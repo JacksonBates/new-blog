@@ -1,6 +1,5 @@
 ---
 title: Learn Github Pull Requests By Playing This Game
-permalink: /learn-github-playing-nomic
 date: "2018-11-14"
 tags:
   - github

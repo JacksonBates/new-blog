@@ -1,6 +1,5 @@
 ---
 title: How to Help Beginning Coders
-permalink: /help-beginners
 date: "2017-11-22"
 tags:
   - learning

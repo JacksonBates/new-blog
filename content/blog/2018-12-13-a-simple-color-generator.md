@@ -1,6 +1,5 @@
 ---
 title: A simple color generator
-permalink: /color-generator
 date: "2018-12-13"
 tags:
   - noodling

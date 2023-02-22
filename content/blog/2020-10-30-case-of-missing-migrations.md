@@ -1,6 +1,5 @@
 ---
 title: The Case of the Missing Migrations
-permalink: /missing-migrations
 date: "2020-10-30"
 tags:
   - inherited-codebase-diaries

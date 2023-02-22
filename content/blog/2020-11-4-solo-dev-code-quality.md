@@ -1,6 +1,5 @@
 ---
 title: Ensuring Code Quality as a Solo Dev
-permalink: /solo-dev-code-quality
 date: "2020-11-04"
 tags:
   - solo-dev

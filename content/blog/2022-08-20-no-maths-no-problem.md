@@ -1,7 +1,6 @@
 ---
 title: No Maths? No Problem!
-permalink: scared-of-maths
-date: "2022-08-20"
+date: "2022-08-20T00:00:00.000Z"
 tags:
   - musings
   - career

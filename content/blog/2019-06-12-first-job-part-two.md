@@ -1,6 +1,5 @@
 ---
 title: Succeeding in Your First Dev Role
-permalink: /beginner-dev-success
 date: "2019-08-14"
 tags:
   - career

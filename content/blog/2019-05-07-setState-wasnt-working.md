@@ -1,6 +1,5 @@
 ---
 title: setState wasn't working - annoying bug postmortem!
-permalink: /setState-fail
 date: "2019-05-07"
 tags:
   - react

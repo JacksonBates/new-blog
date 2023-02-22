@@ -1,6 +1,5 @@
 ---
 title: Testing Forestry
-permalink: testing-forestry
 date: "2022-02-06"
 description:
   I've tried two web interfaces on mobile for managing my Jekyll blog.

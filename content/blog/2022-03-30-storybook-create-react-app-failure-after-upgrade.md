@@ -1,6 +1,5 @@
 ---
 title: Storybook Create React App Failure After Upgrade
-permalink: storybook-create-react-app-webpack-problems
 date: "2022-03-30"
 tags:
   - post-mortem

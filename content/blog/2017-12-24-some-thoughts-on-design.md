@@ -1,6 +1,5 @@
 ---
 title: Some Thoughts on Design
-permalink: /thoughts-on-design
 date: "2017-12-24"
 tags:
   - design

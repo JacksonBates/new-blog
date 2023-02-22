@@ -1,6 +1,5 @@
 ---
 title: What I learned writing 6 functions that all do the same thing
-permalink: /six-functions
 date: "2016-10-30"
 tags:
   - code

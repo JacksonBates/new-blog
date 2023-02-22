@@ -1,6 +1,5 @@
 ---
 title: Getting Started With Passwordless Authentication
-permalink: /passwordless
 date: "2016-09-20T00:00:00.0Z"
 tags:
   - authentication

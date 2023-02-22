@@ -1,6 +1,5 @@
 ---
 title: How to Add Reading Time to Jekyll
-permalink: /reading-time
 date: "2020-11-15"
 tags:
   - tips

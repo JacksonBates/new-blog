@@ -1,10 +1,9 @@
 ---
 title: The Case of the Missing File
-permalink: no-react-file-post-data
-date: "2022-08-03"
-description:
-  Confusingly, my React app was not accepting file uploads and posting
-  them as expected. The problem lay in improper fetch abstractions.
+date: "2022-08-03T00:00:00.000Z"
+description: >-
+  Confusingly, my React app was not accepting file uploads and posting them as
+  expected. The problem lay in improper fetch abstractions.
 rss_only: false
 ---
 

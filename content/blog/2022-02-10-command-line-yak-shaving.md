@@ -1,6 +1,5 @@
 ---
 title: Command Line Yak Shaving
-permalink: zsh-yak-shave
 date: "2022-02-10"
 tags:
   - noodling

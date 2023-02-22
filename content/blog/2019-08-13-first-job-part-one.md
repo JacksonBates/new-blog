@@ -1,6 +1,5 @@
 ---
 title: Switching Careers and Becoming a Programmer
-permalink: /career-switcher
 date: "2019-08-13"
 tags:
   - career

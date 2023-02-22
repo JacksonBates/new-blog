@@ -1,6 +1,5 @@
 ---
 title: CRACO Storybook sagas continue
-permalink: craco-shenanigans-part-2
 date: "2022-07-29"
 tags:
   - post-mortem

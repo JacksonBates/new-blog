@@ -1,6 +1,5 @@
 ---
 title: Setting Cannonical Urls for Your Poole / Jekyll Blog
-permalink: /canonical-url
 date: "2019-06-14"
 tags:
   - seo
