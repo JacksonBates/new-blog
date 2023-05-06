@@ -44,7 +44,7 @@ Great! Let's start by using the GROW model to work towards your goal of handling
 
 GROW stands for Goal, Reality, Options, and Willingness. We'll go through each step together. Please keep in mind that this is a collaborative process, so feel free to ask questions or share any insights that come up along the way.
 
-Firstly, let's start with the "G" in GROW. What is your specific goal when it comes to handling criticism? What would you like to achieve in this area?
+Firstly, let's start with the "G" in GROW. What goal would you like to work on?
 
 Me:
 
