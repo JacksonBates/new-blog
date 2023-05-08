@@ -40,7 +40,7 @@ Yes
 
 ChatGPT:
 
-Great! Let's start by using the GROW model to work towards your goal of handling criticism better.
+Great!
 
 GROW stands for Goal, Reality, Options, and Willingness. We'll go through each step together. Please keep in mind that this is a collaborative process, so feel free to ask questions or share any insights that come up along the way.
 
