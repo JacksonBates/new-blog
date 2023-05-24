@@ -7,4 +7,4 @@ eleventyNavigation:
 
 # About
 
-A collection of amateur observations about tags, mostly local to Templestowe, VIC.
+A mostly professional software engineer, and amateur in many other things.
