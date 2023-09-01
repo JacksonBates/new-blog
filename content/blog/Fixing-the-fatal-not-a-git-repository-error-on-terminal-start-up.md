@@ -5,7 +5,7 @@ tags:
   - noodling
 ---
 
-I tiny paper cut I've had for a while is that every time I start up the terminal (iTerm2, to be exact), I get a pesky error message before I've even done anything:
+A tiny paper cut I've had for a while is that every time I start up the terminal (iTerm2, to be exact), I get a pesky error message before I've even done anything:
 
 `fatal: not a git repository (or any of the parent directories): .git`
 
