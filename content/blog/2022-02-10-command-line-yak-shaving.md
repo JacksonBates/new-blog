@@ -1,6 +1,6 @@
 ---
 title: Command Line Yak Shaving
-date: "2022-02-10"
+date: '2022-02-10T00:00:00.000Z'
 tags:
   - noodling
 description: Mastering the art of yak shaving one command line utility at a time.
@@ -21,7 +21,7 @@ So I started to wonder if it was possible to close all idle terminals in a singl
 
 Of course you can just kill the gnome-terminal-server process, but that will also kill things that are still running, like `yarn start`, `htop`, or anything else that persists in the foreground.
 
-It took some exploration and bouncing ideas around with [Shane](https://twitter.com/SaturniusMons) on Twitter, but I got there.
+It took some exploration and bouncing ideas around with [Shane](https://twitter.com/SaturniusMons "") on Twitter, but I got there.
 
 So to figure this out I did the following:
 
@@ -35,12 +35,14 @@ To test the terminals I spawned a few and ran `htop` in one of them. Easy.
 
 This is some of the output from `ps a`:
 
-        1355005 pts/1    Ss+    0:00 -zsh
-        1355347 pts/2    Ss     0:00 -zsh
-        1355733 pts/2    S+     0:11 htop
-        1355745 pts/3    Ss+    0:00 -zsh
-        1356086 pts/4    Ss     0:00 -zsh
-        1356594 pts/4    R+     0:00 ps a
+```shell
+1355005 pts / 1    Ss+ 0:00 - zsh
+1355347 pts / 2    Ss  0:00 - zsh
+1355733 pts / 2    S+  0:11 htop
+1355745 pts / 3    Ss+ 0:00 - zsh
+1356086 pts / 4    Ss  0:00 - zsh
+1356594 pts / 4    R + 0:00 ps a
+```
 
 So my first attempt, inspired by Shane, was to `grep` for the running instances, `cut` the process ids, and then pipe those to the `kill -9` command.
 
@@ -64,12 +66,14 @@ Now `cut` is where you start to get into command line wizardry territory. (Not `
 
 All of that together so far produces the following:
 
-    1355005
-    1355347
-    1355745
-    1356086
-    1356837
-    1357566
+```shell
+1355005
+1355347
+1355745
+1356086
+1356837
+1357566
+```
 
 Nice!
 
@@ -77,19 +81,23 @@ Now, `xargs` is more wizardry, and where the real magic happens. `xargs`, which 
 
 So `...previous commands...| xargs kill -9` is like doing:
 
-    kill -9 1355005
-    kill -9 1355347
-    kill -9 1355745
-    kill -9 1356086
-    kill -9 1356837
-    kill -9 1357566
+```shell
+kill -9 1355005
+kill -9 1355347
+kill -9 1355745
+kill -9 1356086
+kill -9 1356837
+kill -9 1357566
+```
 
 So why doesn't that work?
 
 Well, firstly, grep has this annoying habit of showing up as a result in its own search:
 
-    1356837 pts/5    Ss     0:00 -zsh
-    1357838 pts/5    S+     0:00 grep --color=auto --exclude-dir=.bzr --exclude-dir=CVS --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn --exclude-dir=.idea --exclude-dir=.tox -e -zsh
+```shell
+1356837 pts/5    Ss     0:00 -zsh
+1357838 pts/5    S+     0:00 grep --color=auto --exclude-dir=.bzr --exclude-dir=CVS --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn --exclude-dir=.idea --exclude-dir=.tox -e -zsh
+```
 
 That last one is not a result we need.
 
@@ -105,23 +113,26 @@ This almost works...except it kills all the terminals, even the ones running `ht
 
 Upon reading the man page for `ps` more closely, I found you can get a nicely formatted process tree like with `ps f` like this:
 
-        PID TTY      STAT   TIME COMMAND
-    1356837 pts/5    Ss     0:00 -zsh
-    1357926 pts/5    R+     0:00  \_ ps f
-    1356086 pts/4    Ss+    0:00 -zsh
-    1355745 pts/3    Ss+    0:00 -zsh
-    1355347 pts/2    Ss     0:00 -zsh
-    1355733 pts/2    S+     1:03  \_ htop
-    1355005 pts/1    Ss+    0:00 -zsh
+```shell
+PID     TTY      STAT   TIME COMMAND
+1356837 pts/5    Ss     0:00 -zsh
+1357926 pts/5    R+     0:00  _ ps f
+1356086 pts/4    Ss+    0:00 -zsh
+1355745 pts/3    Ss+    0:00 -zsh
+1355347 pts/2    Ss     0:00 -zsh
+1355733 pts/2    S+     1:03  _ htop
+1355005 pts/1    Ss+    0:00 -zsh
+```
 
 So now we can see that terminals running the command are identifiable in this view, at least. This also caused me to notice the STAT column. The idle terminals all had the same STAT in common: `Ss+`.
 
 Again, reading the man page confirmed my suspicion:
 
-    PROCESS STATE CODES - truncated for our purposes...
-                   S    interruptible sleep (waiting for an event to complete)
-                   s    is a session leader
-                   +    is in the foreground process group
+PROCESS STATE CODES - truncated for our purposes...
+S    interruptible sleep (waiting for an event to complete)
+s    is a session leader
+
+* is in the foreground process group
 
 So `Ss+` shows us interruptible, foregrounded, session leaders. i.e. idle zsh sessions, not running anything, safe to kill.
 
