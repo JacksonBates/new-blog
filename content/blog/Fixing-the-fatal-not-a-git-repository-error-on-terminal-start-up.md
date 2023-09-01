@@ -27,8 +27,7 @@ To fix this, I added the same logic but as a little function (in a small custom 
 
 ```shell
 function branch-prune() {
-  3   git branch - D $(git branch | grep - v 'master\|*')
-  4
+  git branch - D $(git branch | grep - v 'master\|*')
 }
 ```
 
